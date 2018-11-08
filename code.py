@@ -1,17 +1,3 @@
-"""
-Convert CSV file to libsvm format.
-Note: All strings will be converted into numbers (see StringValuesHelper)
-
-based on: https://github.com/zygmuntz/phraug/blob/master/csv2libsvm.py
-
-Usage example:
-
-csvConverter = Csv2LibSvmConverter(7) # count of columns in CSV file
-csvConverter.convert('./data/menu-item-gt-train.csv', './libsvm-data/gt.train')
-csvConverter.convert('./data/menu-item-gt-test.csv', './libsvm-data/gt.test')
-
-"""
-
 import csv
 
 
