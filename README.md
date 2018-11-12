@@ -7,7 +7,7 @@ Input can include string and int.
 
 
 
-Usage example:
+Example:
 
 csvConverter = Csv2LibSvmConverter(n) # n is the count of columns in CSV file
 
