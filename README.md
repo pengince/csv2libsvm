@@ -2,12 +2,7 @@
 
 Convert CSV file to libsvm format.
 
-input可以包括string
-
-
-
-based on: https://github.com/zygmuntz/phraug/blob/master/csv2libsvm.py
-
+Input can include string and int.
 
 
 
