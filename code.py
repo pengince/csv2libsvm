@@ -30,14 +30,22 @@ class Csv2LibSvmConverter:
         if self._skip_headers:
             headers = reader.next()
 
+        a=0
+        line_con=''
         for line in reader:
+            a+=1
             if self._label_index == -1:
                 label = '1'
             else:
                 label = line.pop(self._label_index)
-
+            
             new_line = self._construct_line(label, line)
-            o.write(new_line)
+            line_con+=new_line
+            if(a%1000==0):
+                o.write(line_con)
+                line_con=''
+                a=0
+        o.write(line_con)
 
     def _is_number(self, value):
         try:
@@ -64,4 +72,3 @@ class Csv2LibSvmConverter:
         new_line = " ".join(new_line)
         new_line += "\n"
         return new_line
-
